@@ -86,8 +86,6 @@ class AboutUsController extends Controller
         }
 
         $aboutUs->save();
-
-        return redirect()->route('aboutus.index')->with('success', 'About Us updated successfully!');
     }
 
     /**

@@ -19,7 +19,7 @@
             <nav class="mt-5">
                 <ul>
                     <li class="px-6 py-3 hover:bg-green-700 cursor-pointer"> <a href="{{ route('dashboard') }}"> Dashboard </a></li>
-                    <li class="px-6 py-3 hover:bg-green-700 cursor-pointer"> <a href="{{ route('createabout.store')}}"> Create About</a></li>
+                    <li class="px-6 py-3 hover:bg-green-700 cursor-pointer"> <a href="{{ route('createabout.store') }}" class="text-white">Update About Us</a>                    </li>
                     <li class="px-6 py-3 hover:bg-green-700 cursor-pointer"><a href="">Create Services  </a></li>
                     <li class="px-6 py-3 hover:bg-green-700 cursor-pointer"><a href="">Listed services</a></li>
                     <li class="px-6 py-2 hover:bg-green-700 cursor-pointer">Contect Messagees</li>

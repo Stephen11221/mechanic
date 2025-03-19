@@ -49,7 +49,7 @@ class AppointmentController extends Controller
     }
 
     /**
-     * Display the specified appointment.
+     * Display the   appointment.
      */
     public function show(Appointment $appointment)
     {

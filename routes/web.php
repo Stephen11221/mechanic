@@ -9,7 +9,8 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AppointmentController;
 use App\Http\Controllers\viewppointmentController;
 use App\Http\Controllers\AboutUsController;
-use function PHPUnit\Framework\returnSelf;
+
+use App\Http\Controllers\Auth\ForgotPasswordController;
 
 
 Route::resource('appointments', AppointmentController::class);
@@ -42,6 +43,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
 });
 
 
+Route::get('/aboutus/{id}/edit', [AboutUsController::class, 'edit'])->name('createabout.edit');
+Route::put('/aboutus/{id}', [AboutUsController::class, 'update'])->name('createabout.update');
+
 Route::middleware(['auth'])->group(function () {
     Route::get('/viewappointment', [ViewppointmentController::class, 'index'])->name('viewappointments.index');
 });
@@ -51,6 +55,9 @@ Route::middleware(['auth'])->group(function () {
 
 });
 
+
+Route::post('password/email', [ForgotPasswordController::class, 'sendResetLinkEmail'])
+    ->name('password.email');
 
 // end of protected route
 

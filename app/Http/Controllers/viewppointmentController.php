@@ -10,6 +10,6 @@ class ViewppointmentController extends Controller
     public function index()
     {
         $appointments = Appointment::all(); // Fetch all appointments
-        return view('dashboard-file.viewappointments', compact('appointments'));
+return view('dashboard-file.viewappointments', compact('appointments'));
     }
 }
